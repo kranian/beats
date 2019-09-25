@@ -1,0 +1,19 @@
+# Module: scouter
+# Docs: https://www.elastic.co/guide/en/beats/filebeat/7.3/filebeat-module-scouter.html
+
+- module: scouter
+  # All logs
+  log :
+    enabled: true
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose the paths depending on your OS.
+    var.paths:
+    #  - /home/kranian/project/elastic_beat/src/github.com/elastic/beats/filebeat/module/scouter/log/test/scouter-counter-host.json
+    #  - /home/kranian/project/elastic_beat/src/github.com/elastic/beats/filebeat/module/scouter/log/test/scouter-counter-javaee.json
+    #  - /home/kranian/project/elastic_beat/src/github.com/elastic/beats/filebeat/module/scouter/log/test/scouter-counter-reqproc.json
+    #  - /home/kranian/project/elastic_beat/src/github.com/elastic/beats/filebeat/module/scouter/log/test/scouter-xlog.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-counter-host.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-counter-javaee.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-counter-reqproc.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-xlog.json
+    var.convert_timezone: true
