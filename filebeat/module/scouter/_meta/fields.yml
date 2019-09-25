@@ -1,0 +1,9 @@
+- key: scouter
+  title: "scouter"
+  description: >
+    scouter Module
+  fields:
+    - name: scouter
+      type: group
+      description: >
+      fields:
