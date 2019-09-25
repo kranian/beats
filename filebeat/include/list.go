@@ -46,6 +46,7 @@ import (
 	_ "github.com/elastic/beats/filebeat/module/postgresql"
 	_ "github.com/elastic/beats/filebeat/module/redis"
 	_ "github.com/elastic/beats/filebeat/module/santa"
+	_ "github.com/elastic/beats/filebeat/module/scouter"
 	_ "github.com/elastic/beats/filebeat/module/system"
 	_ "github.com/elastic/beats/filebeat/module/traefik"
 )

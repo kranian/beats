@@ -3,11 +3,9 @@ module_version: 1.0
 var:
   - name: paths
     default:
-      - /example/test.log*
-    os.darwin:
-      - /usr/local/example/test.log*
-    os.windows:
-      - c:/programdata/example/logs/test.log*
+      - /path/scouter/server/ext_plugin_filelog/scouter-counter-host.json
+      - /path/scouter/server/ext_plugin_filelog/scouter-counter-javaee.json
+      - /path/scouter/server/ext_plugin_filelog/scouter-xlog.json
 
 ingest_pipeline: ingest/pipeline.json
-input: config/metric_log.yml
+input: config/log.yml

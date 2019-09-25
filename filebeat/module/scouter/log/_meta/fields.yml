@@ -1,110 +1,165 @@
 - name: log
   type: group
   description: >
-    scouter log lines.
+    scouter counter lines.
   fields:
+  - name: server
+    type: group
+    fields:
+     - name : id
+       type : keyword
   - name: object
     type: group
-    fields :
+    fields:
       - name: name
         type: keyword
-      - name: hashid
+      - name: hash
         type: keyword
       - name: type
+        type: keyword
+      - name: host
+        type: keyword
+      - name: id
         type: keyword
       - name: familly
         type: keyword
   - name: javaee
     type: group
-    fields :
-      - name : active_service
+    description: >
+      scouter javaee counter
+    fields:
+      - name: active_service
         type: integer
-      - name : api_error_rate
+      - name: api_error_rate
         type: float
-      - name : api_tps
+      - name: api_tps
         type: float
-      - name : api_time
+      - name: api_time
         type: long
-      - name : api_time_by_service
+      - name: api_time_by_service
         type: integer
-      - name : elapsed_almost
+      - name: elapsed_almost
         type: integer
-      - name : elapsed_time
+      - name: elapsed_time
         type: integer
-      - name : error_rate
+      - name: error_rate
         type: float
-      - name : gc_count
+      - name: gc_count
         type: integer
-      - name : gc_time
+      - name: gc_time
         type: long
-      - name : heap_total
+      - name: heap_total
         type: float
-      - name : heap_used
+      - name: heap_used
         type: float
-      - name : perm_percent
+      - name: perm_percent
         type: float
-      - name : perm_used
+      - name: perm_used
         type: float
-      - name : recent_user
+      - name: recent_user
         type: integer
-      - name : service_count
+      - name: service_count
         type: integer
-      - name : sql_error_rate
+      - name: sql_error_rate
         type: float
-      - name : sql_tps
+      - name: sql_tps
         type: float
-      - name : sql_time
+      - name: sql_time
         type: integer
-      - name : sql_time_by_service
+      - name: sql_time_by_service
         type: integer
-      - name : tps
+      - name: tps
         type: float
   - name: host
     type: group
     description: >
       scouter host
     fields:
-    - name: mem_free
-      type: integer
-    - name: tcp_state_est
-      type: integer
-    - name: disk_read_bytes
-      type: integer
-    - name: disk_write_bytes
-      type: integer
-    - name: tcp_stat_tim
-      type: integer
-    - name: user_cpu
-      type: float
-    - name: net_rx_bytes
-      type: integer
-    - name: page_in
-      type: integer
-    - name: net_out_bound
-      type: integer
-    - name: tcp_stat_fin
-      type: integer
-    - name: sys_cpu
-      type: float
-    - name: net_tx_bytes
-      type: integer
-    - name: tcp_stat_cls
-      type: integer
-    - name: mem_used
-      type: integer
-    - name: mem_util
-      type: float
-    - name: mem_total
-      type: integer
-    - name: cpu_util
-      type: float
-    - name: page_out
-      type: integer
-    - name: swap_uitl
-      type: float
-    - name: swap_used
-      type: integer
-    - name: swap_total
-      type: integer
-    - name: net_inbound
-      type: integer
+      - name: cpu_util
+        type: float
+      - name: disk_read_bytes
+        type: long
+      - name: disk_write_bytes
+        type: long
+      - name: mem_util
+        type: float
+      - name: mem_free
+        type: integer
+      - name: mem_total
+        type: integer
+      - name: mem_used
+        type: integer
+      - name: net_inbound
+        type: integer
+      - name: net_outbound
+        type: integer
+      - name: net_rx_bytes
+        type: integer
+      - name: net_tx_bytes
+        type: integer
+      - name: swap_page_in
+        type: integer
+      - name: swap_page_out
+        type: integer
+      - name: swap_util
+        type: float
+      - name: swap_total
+        type: integer
+      - name: swap_used
+        type: integer
+      - name: sys_cpu
+        type: float
+      - name: tcp_stat_cls
+        type: integer
+      - name: tcp_stat_est
+        type: integer
+      - name: tcp_stat_fin
+        type: integer
+      - name: tcp_stat_tim
+        type: integer
+      - name: user_cpu
+        type: float
+  - name: tracing
+    type: group
+    description: >
+      scouter service trace info
+    fields:
+      - name: alloc_memory
+        type: long
+      - name: api_call_count
+        type: integer
+      - name: api_call_time
+        type: long
+      - name: caller
+        type: keyword
+      - name: cpu
+        type: integer
+      - name: elapsed
+        type: integer
+      - name: end_time_epoch
+        type: long
+      - name: error_count
+        type: integer
+      - name: ip_addr
+        type: ip
+      - name: sql_count
+        type: integer
+      - name: sql_time
+        type: long
+      - name: start_time_epoch
+        type: long
+  - name: reqproc
+    type: group
+    description: >
+      tomcat service request process counter
+    fields:
+      - name: bytes_received
+        type: long
+      - name: bytes_sent
+        type: long
+      - name: error_count
+        type: integer
+      - name: processing_time
+        type: long
+      - name: request_count
+        type: integer

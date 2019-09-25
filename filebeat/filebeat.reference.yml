@@ -360,6 +360,19 @@ filebeat.modules:
     # Filebeat will choose the the default path.
     #var.paths:
 
+#------------------------------- Scouter Module -------------------------------
+- module: scouter
+  # All logs
+  log :
+    enabled: false
+    # Set custom paths for the log files. If left empty,
+    # Filebeat will choose the paths depending on your OS.
+    # var.paths:
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-counter-host.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-counter-javaee.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-counter-reqproc.json
+    #  - /path/scouter/server/ext_plugin_filelog/scouter-xlog.json
+
 #------------------------------- Traefik Module -------------------------------
 #- module: traefik
   # Access logs

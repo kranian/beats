@@ -48,6 +48,7 @@ grouped in the following categories:
 * <<exported-fields-rabbitmq>>
 * <<exported-fields-redis>>
 * <<exported-fields-santa>>
+* <<exported-fields-scouter>>
 * <<exported-fields-suricata>>
 * <<exported-fields-system>>
 * <<exported-fields-traefik>>
@@ -12878,6 +12879,525 @@ type: keyword
 Hash of process executable.
 
 type: keyword
+
+--
+
+[[exported-fields-scouter]]
+== scouter fields
+
+scouter Module
+
+
+
+[float]
+=== scouter
+
+
+
+
+[float]
+=== log
+
+scouter counter lines.
+
+
+
+
+*`scouter.log.server.id`*::
++
+--
+type: keyword
+
+--
+
+
+*`scouter.log.object.name`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.object.hash`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.object.type`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.object.host`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.object.id`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.object.familly`*::
++
+--
+type: keyword
+
+--
+
+[float]
+=== javaee
+
+scouter javaee counter
+
+
+
+*`scouter.log.javaee.active_service`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.api_error_rate`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.api_tps`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.api_time`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.javaee.api_time_by_service`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.elapsed_almost`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.elapsed_time`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.error_rate`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.gc_count`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.gc_time`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.javaee.heap_total`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.heap_used`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.perm_percent`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.perm_used`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.recent_user`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.service_count`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.sql_error_rate`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.sql_tps`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.javaee.sql_time`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.sql_time_by_service`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.javaee.tps`*::
++
+--
+type: float
+
+--
+
+[float]
+=== host
+
+scouter host
+
+
+
+*`scouter.log.host.cpu_util`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.host.disk_read_bytes`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.host.disk_write_bytes`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.host.mem_util`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.host.mem_free`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.mem_total`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.mem_used`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.net_inbound`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.net_outbound`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.net_rx_bytes`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.net_tx_bytes`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.swap_page_in`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.swap_page_out`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.swap_util`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.host.swap_total`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.swap_used`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.sys_cpu`*::
++
+--
+type: float
+
+--
+
+*`scouter.log.host.tcp_stat_cls`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.tcp_stat_est`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.tcp_stat_fin`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.tcp_stat_tim`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.host.user_cpu`*::
++
+--
+type: float
+
+--
+
+[float]
+=== tracing
+
+scouter service trace info
+
+
+
+*`scouter.log.tracing.alloc_memory`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.tracing.api_call_count`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.tracing.api_call_time`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.tracing.caller`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.tracing.cpu`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.tracing.elapsed`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.tracing.end_time_epoch`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.tracing.error_count`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.tracing.ip_addr`*::
++
+--
+type: ip
+
+--
+
+*`scouter.log.tracing.sql_count`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.tracing.sql_time`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.tracing.start_time_epoch`*::
++
+--
+type: long
+
+--
+
+[float]
+=== reqproc
+
+tomcat service request process counter
+
+
+
+*`scouter.log.reqproc.bytes_received`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.reqproc.bytes_sent`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.reqproc.error_count`*::
++
+--
+type: integer
+
+--
+
+*`scouter.log.reqproc.processing_time`*::
++
+--
+type: long
+
+--
+
+*`scouter.log.reqproc.request_count`*::
++
+--
+type: integer
 
 --
 

@@ -29,6 +29,7 @@ This file is generated! See scripts/docs_collector.py
   * <<filebeat-module-rabbitmq>>
   * <<filebeat-module-redis>>
   * <<filebeat-module-santa>>
+  * <<filebeat-module-scouter>>
   * <<filebeat-module-suricata>>
   * <<filebeat-module-system>>
   * <<filebeat-module-traefik>>
@@ -64,6 +65,7 @@ include::modules/postgresql.asciidoc[]
 include::modules/rabbitmq.asciidoc[]
 include::modules/redis.asciidoc[]
 include::modules/santa.asciidoc[]
+include::modules/scouter.asciidoc[]
 include::modules/suricata.asciidoc[]
 include::modules/system.asciidoc[]
 include::modules/traefik.asciidoc[]

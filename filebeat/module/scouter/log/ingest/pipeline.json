@@ -1,7 +1,552 @@
 {
   "description": "Pipeline for parsing scouter metric_log logs",
   "processors": [
-    ],
+      {
+          "rename": {
+              "field": "json",
+              "target_field": "scouter.log"
+          }
+      },
+      {
+          "date" : {
+              "field" : "scouter.log.startTime",
+              "formats": ["yyyyMMdd'T'HHmmss.SSSZ", "ISO8601"],
+              "timezone": "Asia/Seoul",
+              "ignore_failure": true
+          }
+      },
+      {
+          "remove": {
+              "field" : "scouter.log.startTime"
+          }
+      },
+      {
+          "remove":{
+              "field" : "scouter.log.host.startTime",
+              "ignore_missing": true
+          }
+      },
+      {
+          "remove":{
+              "field" : "scouter.log.tracing.startTime",
+              "ignore_missing": true
+          }
+      },
+      {
+          "remove":{
+              "field" : "scouter.log.reqproc.startTime",
+              "ignore_missing": true
+          }
+      },
+      {
+          "remove":{
+              "field" : "scouter.log.javaee.startTime",
+              "ignore_missing": true
+          }
+      },
+      {
+          "set":{
+              "field" : "scouter.log.event_time",
+              "value" : "{{ @timestamp }}"
+          }
+      },
+
+      {
+          "rename": {
+              "field": "scouter.log.objName",
+              "target_field": "scouter.log.object.name"
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.server_id",
+              "target_field": "scouter.log.server.id"
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.objHash",
+              "target_field": "scouter.log.object.hash"
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.objType",
+              "target_field": "scouter.log.object.type"
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.objHost",
+              "target_field": "scouter.log.object.host",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.objId",
+              "target_field": "scouter.log.object.id",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.objFamily",
+              "target_field": "scouter.log.object.family",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ElapsedTime",
+              "target_field": "scouter.log.javaee.elapsed_time",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ServiceCount",
+              "target_field": "scouter.log.javaee.service_count",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.Elapsed90%",
+              "target_field": "scouter.log.javaee.elapsed_almost",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.RecentUser",
+              "target_field": "scouter.log.javaee.recent_user",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ApiTime",
+              "target_field": "scouter.log.javaee.api_time",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ErrorRate",
+              "target_field": "scouter.log.javaee.error_rate",
+              "ignore_missing": true
+          }
+      },
+      {
+          "remove": {
+              "field": "scouter.log.javaee.QueuingTime",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.GcCount",
+              "target_field": "scouter.log.javaee.gc_count",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.SqlErrorRate",
+              "target_field": "scouter.log.javaee.sql_error_rate",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.GcTime",
+              "target_field": "scouter.log.javaee.gc_time",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.PermUsed",
+              "target_field": "scouter.log.javaee.perm_used",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.SqlTime",
+              "target_field": "scouter.log.javaee.sql_time",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ApiErrorRate",
+              "target_field": "scouter.log.javaee.api_error_rate",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.SqlTPS",
+              "target_field": "scouter.log.javaee.sql_tps",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ApiTimeByService",
+              "target_field": "scouter.log.javaee.api_time_by_service",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.HeapTotal",
+              "target_field": "scouter.log.javaee.heap_total",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.HeapUsed",
+              "target_field": "scouter.log.javaee.heap_used",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.TPS",
+              "target_field": "scouter.log.javaee.tps",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ActiveService",
+              "target_field": "scouter.log.javaee.active_service",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.ApiTPS",
+              "target_field": "scouter.log.javaee.api_tps",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.javaee.SqlTimeByService",
+              "target_field": "scouter.log.javaee.sql_time_by_service",
+              "ignore_missing": true
+          }
+      },
+
+      {
+          "rename": {
+              "field": "scouter.log.host.MemA",
+              "target_field": "scouter.log.host.mem_free",
+              "ignore_missing": true
+          }
+      },
+
+      {
+          "rename": {
+              "field": "scouter.log.host.TcpStatEST",
+              "target_field": "scouter.log.host.tcp_stat_est",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.DiskReadBytes",
+              "target_field": "scouter.log.host.disk_read_bytes",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.DiskWriteBytes",
+              "target_field": "scouter.log.host.disk_write_bytes",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.TcpStatTIM",
+              "target_field": "scouter.log.host.tcp_stat_tim",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.UserCpu",
+              "target_field": "scouter.log.host.user_cpu",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.NetRxBytes",
+              "target_field": "scouter.log.host.net_rx_bytes",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.PageIn",
+              "target_field": "scouter.log.host.swap_page_in",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.NetOutBound",
+              "target_field": "scouter.log.host.net_outbound",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.TcpStatFIN",
+              "target_field": "scouter.log.host.tcp_stat_fin",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.SysCpu",
+              "target_field": "scouter.log.host.sys_cpu",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.NetTxBytes",
+              "target_field": "scouter.log.host.net_tx_bytes",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.TcpStatCLS",
+              "target_field": "scouter.log.host.tcp_stat_cls",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.MemU",
+              "target_field": "scouter.log.host.mem_used",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.Mem",
+              "target_field": "scouter.log.host.mem_util",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.MemT",
+              "target_field": "scouter.log.host.mem_total",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.Cpu",
+              "target_field": "scouter.log.host.cpu_util",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.PageOut",
+              "target_field": "scouter.log.host.swap_page_out",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.Swap",
+              "target_field": "scouter.log.host.swap_util",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.SwapU",
+              "target_field": "scouter.log.host.swap_used",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.SwapT",
+              "target_field": "scouter.log.host.swap_total",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.host.NetInBound",
+              "target_field": "scouter.log.host.net_inbound",
+              "ignore_missing": true
+          }
+      },
+
+      {
+          "remove": {
+              "field": "scouter.log.tracing.endTime",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.startTimeEpoch",
+              "target_field": "scouter.log.tracing.start_time_epoch",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.endTimeEpoch",
+              "target_field": "scouter.log.tracing.end_time_epoch",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.serviceName",
+              "target_field": "scouter.log.tracing.service_name",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.threadName",
+              "target_field": "scouter.log.tracing.thread_name",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.gxId",
+              "target_field": "scouter.log.tracing.gx_id",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.txId",
+              "target_field": "scouter.log.tracing.tx_id",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.error",
+              "target_field": "scouter.log.tracing.error_count",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.sqlCount",
+              "target_field": "scouter.log.tracing.sql_count",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.sqlTime",
+              "target_field": "scouter.log.tracing.sql_time",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.ipAddr",
+              "target_field": "scouter.log.tracing.ip_addr",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.allocMemory",
+              "target_field": "scouter.log.tracing.alloc_memory",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.userAgent",
+              "target_field": "scouter.log.tracing.user_agent",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.apiCallCount",
+              "target_field": "scouter.log.tracing.api_call_count",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.tracing.apiCallTime",
+              "target_field": "scouter.log.tracing.api_call_time",
+              "ignore_missing": true
+          }
+      },
+
+      {
+          "rename": {
+              "field": "scouter.log.reqproc.ProcessingTime",
+              "target_field": "scouter.log.reqproc.processing_time",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.reqproc.BytesReceived",
+              "target_field": "scouter.log.reqproc.bytes_received",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.reqproc.BytesSent",
+              "target_field": "scouter.log.reqproc.bytes_send",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.reqproc.BytesSent",
+              "target_field": "scouter.log.reqproc.bytes_sent",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.reqproc.RequestCount",
+              "target_field": "scouter.log.reqproc.request_count",
+              "ignore_missing": true
+          }
+      },
+      {
+          "rename": {
+              "field": "scouter.log.reqproc.ErrorCount",
+              "target_field": "scouter.log.reqproc.error_count",
+              "ignore_missing": true
+          }
+      }
+ ],
   "on_failure" : [{
     "set" : {
       "field" : "error.message",
