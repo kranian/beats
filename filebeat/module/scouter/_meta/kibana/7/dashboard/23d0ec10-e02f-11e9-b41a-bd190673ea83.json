@@ -1,0 +1,1029 @@
+{
+  "objects": [
+    {
+      "attributes": {
+        "description": "",
+        "hits": 0,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [],
+            "query": {
+              "language": "kuery",
+              "query": ""
+            }
+          }
+        },
+        "optionsJSON": {
+          "hidePanelTitles": false,
+          "useMargins": true
+        },
+        "panelsJSON": [
+          {
+            "embeddableConfig": {},
+            "gridData": {
+              "h": 5,
+              "i": "1",
+              "w": 13,
+              "x": 0,
+              "y": 0
+            },
+            "panelIndex": "1",
+            "panelRefName": "panel_0",
+            "version": "7.3.0"
+          },
+          {
+            "embeddableConfig": {},
+            "gridData": {
+              "h": 15,
+              "i": "4",
+              "w": 24,
+              "x": 0,
+              "y": 5
+            },
+            "panelIndex": "4",
+            "panelRefName": "panel_1",
+            "version": "7.3.0"
+          },
+          {
+            "embeddableConfig": {},
+            "gridData": {
+              "h": 15,
+              "i": "5",
+              "w": 24,
+              "x": 24,
+              "y": 5
+            },
+            "panelIndex": "5",
+            "panelRefName": "panel_2",
+            "version": "7.3.0"
+          },
+          {
+            "embeddableConfig": {},
+            "gridData": {
+              "h": 13,
+              "i": "6",
+              "w": 48,
+              "x": 0,
+              "y": 20
+            },
+            "panelIndex": "6",
+            "panelRefName": "panel_3",
+            "version": "7.3.0"
+          },
+          {
+            "embeddableConfig": {},
+            "gridData": {
+              "h": 15,
+              "i": "7",
+              "w": 48,
+              "x": 0,
+              "y": 33
+            },
+            "panelIndex": "7",
+            "panelRefName": "panel_4",
+            "version": "7.3.0"
+          },
+          {
+            "embeddableConfig": {},
+            "gridData": {
+              "h": 5,
+              "i": "8",
+              "w": 35,
+              "x": 13,
+              "y": 0
+            },
+            "panelIndex": "8",
+            "panelRefName": "panel_5",
+            "version": "7.3.0"
+          }
+        ],
+        "timeRestore": false,
+        "title": "scouter-metric: Host",
+        "version": 1
+      },
+      "id": "23d0ec10-e02f-11e9-b41a-bd190673ea83",
+
+      "type": "dashboard",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzExLDFd"
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [],
+            "query": {
+              "language": "kuery",
+              "query": ""
+            }
+          }
+        },
+        "title": "scouter-metric: dashboard-navi",
+        "uiStateJSON": {},
+        "version": 1,
+        "visState": {
+          "aggs": [],
+          "params": {
+            "fontSize": 12,
+            "markdown": "**SC-Dashboard**  [Xlog-Overview](#/dashboard/bdb3c200-e00a-11e9-b41a-bd190673ea83) | [Xlog-Analysis](#/dashboard/f521e660-e017-11e9-b41a-bd190673ea83) | [JavaEE-Metric](#/dashboard/d4430860-e027-11e9-b41a-bd190673ea83) | [Host-Metric](#/dashboard/23d0ec10-e02f-11e9-b41a-bd190673ea83)",
+            "openLinksInNewTab": false
+          },
+          "title": "scouter-metric: dashboard-navi",
+          "type": "markdown"
+        }
+      },
+      "id": "31b9c520-e004-11e9-b41a-bd190673ea83",
+
+      "type": "visualization",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzQsMV0="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [
+              {
+                "$state": {
+                  "store": "appState"
+                },
+                "meta": {
+                  "alias": null,
+                  "disabled": false,
+                  "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                  "key": "scouter.log.object.host",
+                  "negate": true,
+                  "params": {
+                    "query": "ZIPKIN"
+                  },
+                  "type": "phrase",
+                  "value": "ZIPKIN"
+                },
+                "query": {
+                  "match": {
+                    "scouter.log.object.host": {
+                      "query": "ZIPKIN",
+                      "type": "phrase"
+                    }
+                  }
+                }
+              }
+            ],
+            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "query": {
+              "language": "kuery",
+              "query": "scouter.log.object.family :\"host\" "
+            }
+          }
+        },
+        "title": "scouter-metric : CPU 사용율",
+        "uiStateJSON": {
+          "vis": {
+            "defaultColors": {
+              "0 - 9": "rgb(255,255,204)",
+              "18 - 27": "rgb(253,141,60)",
+              "27 - 35": "rgb(227,27,28)",
+              "9 - 18": "rgb(254,217,118)"
+            }
+          }
+        },
+        "version": 1,
+        "visState": {
+          "aggs": [
+            {
+              "enabled": true,
+              "id": "1",
+              "params": {
+                "customLabel": "최대CPU사용율",
+                "field": "scouter.log.host.cpu_util"
+              },
+              "schema": "metric",
+              "type": "max"
+            },
+            {
+              "enabled": true,
+              "id": "2",
+              "params": {
+                "drop_partials": false,
+                "extended_bounds": {},
+                "field": "@timestamp",
+                "interval": "auto",
+                "min_doc_count": 1,
+                "timeRange": {
+                  "from": "2019-09-24T16:18:56.377Z",
+                  "to": "2019-09-24T18:30:00.000Z"
+                },
+                "useNormalizedEsInterval": true
+              },
+              "schema": "segment",
+              "type": "date_histogram"
+            },
+            {
+              "enabled": true,
+              "id": "3",
+              "params": {
+                "field": "scouter.log.object.host",
+                "missingBucket": false,
+                "missingBucketLabel": "Missing",
+                "order": "desc",
+                "orderBy": "1",
+                "otherBucket": false,
+                "otherBucketLabel": "Other",
+                "size": 5
+              },
+              "schema": "group",
+              "type": "terms"
+            }
+          ],
+          "params": {
+            "addLegend": true,
+            "addTooltip": true,
+            "colorSchema": "Yellow to Red",
+            "colorsNumber": 4,
+            "colorsRange": [],
+            "dimensions": {
+              "x": {
+                "accessor": 0,
+                "aggType": "date_histogram",
+                "format": {
+                  "id": "date",
+                  "params": {
+                    "pattern": "HH:mm"
+                  }
+                },
+                "params": {
+                  "bounds": {
+                    "max": "2019-09-24T18:30:00.000Z",
+                    "min": "2019-09-24T16:18:56.377Z"
+                  },
+                  "date": true,
+                  "format": "HH:mm",
+                  "interval": "PT1M"
+                }
+              },
+              "y": [
+                {
+                  "accessor": 1,
+                  "aggType": "max",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                }
+              ]
+            },
+            "enableHover": false,
+            "invertColors": false,
+            "legendPosition": "right",
+            "percentageMode": false,
+            "setColorRange": false,
+            "times": [],
+            "type": "heatmap",
+            "valueAxes": [
+              {
+                "id": "ValueAxis-1",
+                "labels": {
+                  "color": "black",
+                  "overwriteColor": false,
+                  "rotate": 0,
+                  "show": false
+                },
+                "scale": {
+                  "defaultYExtents": false,
+                  "type": "linear"
+                },
+                "show": false,
+                "type": "value"
+              }
+            ]
+          },
+          "title": "scouter-metric : CPU 사용율",
+          "type": "heatmap"
+        }
+      },
+      "id": "c7d72040-e02f-11e9-b41a-bd190673ea83",
+
+      "type": "visualization",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzYsMV0="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [],
+            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "query": {
+              "language": "kuery",
+              "query": "scouter.log.object.family : \"host\"  "
+            }
+          }
+        },
+        "title": "scouter-metric: 최근 CPU 사용률",
+        "uiStateJSON": {
+          "vis": {
+            "defaultColors": {
+              "0 - 50": "rgb(0,104,55)",
+              "50 - 75": "rgb(255,255,190)",
+              "75 - 100": "rgb(165,0,38)"
+            }
+          }
+        },
+        "version": 1,
+        "visState": {
+          "aggs": [
+            {
+              "enabled": true,
+              "id": "1",
+              "params": {
+                "aggregate": "max",
+                "field": "scouter.log.host.cpu_util",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "2",
+              "params": {
+                "field": "scouter.log.object.name",
+                "missingBucket": false,
+                "missingBucketLabel": "Missing",
+                "order": "desc",
+                "orderBy": "_key",
+                "otherBucket": false,
+                "otherBucketLabel": "Other",
+                "size": 5
+              },
+              "schema": "group",
+              "type": "terms"
+            }
+          ],
+          "params": {
+            "addLegend": true,
+            "addTooltip": true,
+            "dimensions": {
+              "series": [
+                {
+                  "accessor": 0,
+                  "aggType": "terms",
+                  "format": {
+                    "id": "terms",
+                    "params": {
+                      "id": "string",
+                      "missingBucketLabel": "Missing",
+                      "otherBucketLabel": "Other"
+                    }
+                  },
+                  "params": {}
+                }
+              ],
+              "x": null,
+              "y": [
+                {
+                  "accessor": 1,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                }
+              ]
+            },
+            "gauge": {
+              "alignment": "automatic",
+              "backStyle": "Full",
+              "colorSchema": "Green to Red",
+              "colorsRange": [
+                {
+                  "from": 0,
+                  "to": 50
+                },
+                {
+                  "from": 50,
+                  "to": 75
+                },
+                {
+                  "from": 75,
+                  "to": 100
+                }
+              ],
+              "extendRange": true,
+              "gaugeColorMode": "Labels",
+              "gaugeStyle": "Full",
+              "gaugeType": "Arc",
+              "invertColors": false,
+              "labels": {
+                "color": "black",
+                "show": true
+              },
+              "orientation": "vertical",
+              "percentageMode": false,
+              "scale": {
+                "color": "rgba(105,112,125,0.2)",
+                "labels": false,
+                "show": true
+              },
+              "style": {
+                "bgColor": true,
+                "bgFill": "rgba(105,112,125,0.2)",
+                "bgMask": false,
+                "bgWidth": 0.9,
+                "fontSize": 60,
+                "mask": false,
+                "maskBars": 50,
+                "subText": "",
+                "width": 0.9
+              },
+              "type": "meter"
+            },
+            "isDisplayWarning": false,
+            "type": "gauge"
+          },
+          "title": "scouter-metric: 최근 CPU 사용률",
+          "type": "gauge"
+        }
+      },
+      "id": "55be7cf0-e030-11e9-b41a-bd190673ea83",
+
+      "type": "visualization",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzcsMV0="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [],
+            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "query": {
+              "language": "kuery",
+              "query": "scouter.log.object.family : \"host\"  "
+            }
+          }
+        },
+        "title": "scouter-metric: 디스크 읽기",
+        "uiStateJSON": {},
+        "version": 1,
+        "visState": {
+          "aggs": [
+            {
+              "enabled": true,
+              "id": "1",
+              "params": {
+                "customLabel": "디스크 읽기(byte)",
+                "field": "scouter.log.host.disk_read_bytes"
+              },
+              "schema": "metric",
+              "type": "max"
+            },
+            {
+              "enabled": true,
+              "id": "2",
+              "params": {
+                "drop_partials": false,
+                "extended_bounds": {},
+                "field": "@timestamp",
+                "interval": "auto",
+                "min_doc_count": 1,
+                "timeRange": {
+                  "from": "2019-09-24T16:18:56.377Z",
+                  "to": "2019-09-24T18:30:00.000Z"
+                },
+                "useNormalizedEsInterval": true
+              },
+              "schema": "segment",
+              "type": "date_histogram"
+            },
+            {
+              "enabled": true,
+              "id": "3",
+              "params": {
+                "field": "scouter.log.object.name",
+                "missingBucket": false,
+                "missingBucketLabel": "Missing",
+                "order": "desc",
+                "orderBy": "1",
+                "otherBucket": false,
+                "otherBucketLabel": "Other",
+                "size": 5
+              },
+              "schema": "group",
+              "type": "terms"
+            }
+          ],
+          "params": {
+            "addLegend": true,
+            "addTimeMarker": false,
+            "addTooltip": true,
+            "categoryAxes": [
+              {
+                "id": "CategoryAxis-1",
+                "labels": {
+                  "filter": true,
+                  "show": true,
+                  "truncate": 100
+                },
+                "position": "bottom",
+                "scale": {
+                  "type": "linear"
+                },
+                "show": true,
+                "style": {},
+                "title": {},
+                "type": "category"
+              }
+            ],
+            "dimensions": {
+              "series": [
+                {
+                  "accessor": 1,
+                  "aggType": "terms",
+                  "format": {
+                    "id": "terms",
+                    "params": {
+                      "id": "string",
+                      "missingBucketLabel": "Missing",
+                      "otherBucketLabel": "Other"
+                    }
+                  },
+                  "params": {}
+                }
+              ],
+              "x": {
+                "accessor": 0,
+                "aggType": "date_histogram",
+                "format": {
+                  "id": "date",
+                  "params": {
+                    "pattern": "HH:mm"
+                  }
+                },
+                "params": {
+                  "bounds": {
+                    "max": "2019-09-24T18:30:00.000Z",
+                    "min": "2019-09-24T16:18:56.377Z"
+                  },
+                  "date": true,
+                  "format": "HH:mm",
+                  "interval": "PT1M"
+                }
+              },
+              "y": [
+                {
+                  "accessor": 2,
+                  "aggType": "max",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                }
+              ]
+            },
+            "grid": {
+              "categoryLines": false
+            },
+            "legendPosition": "right",
+            "seriesParams": [
+              {
+                "data": {
+                  "id": "1",
+                  "label": "디스크 읽기(byte)"
+                },
+                "drawLinesBetweenPoints": true,
+                "interpolate": "cardinal",
+                "mode": "normal",
+                "show": "true",
+                "showCircles": true,
+                "type": "line",
+                "valueAxis": "ValueAxis-1"
+              }
+            ],
+            "times": [],
+            "type": "line",
+            "valueAxes": [
+              {
+                "id": "ValueAxis-1",
+                "labels": {
+                  "filter": false,
+                  "rotate": 0,
+                  "show": true,
+                  "truncate": 100
+                },
+                "name": "LeftAxis-1",
+                "position": "left",
+                "scale": {
+                  "mode": "normal",
+                  "type": "linear"
+                },
+                "show": true,
+                "style": {},
+                "title": {
+                  "text": "디스크 읽기(byte)"
+                },
+                "type": "value"
+              }
+            ]
+          },
+          "title": "scouter-metric: 디스크 읽기",
+          "type": "line"
+        }
+      },
+      "id": "979531a0-e030-11e9-b41a-bd190673ea83",
+
+      "type": "visualization",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzgsMV0="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [],
+            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "query": {
+              "language": "kuery",
+              "query": "scouter.log.object.family : \"host\"  "
+            }
+          }
+        },
+        "title": "scouter-metric: Host ",
+        "uiStateJSON": {
+          "vis": {
+            "params": {
+              "sort": {
+                "columnIndex": 1,
+                "direction": "asc"
+              }
+            }
+          }
+        },
+        "version": 1,
+        "visState": {
+          "aggs": [
+            {
+              "enabled": true,
+              "id": "2",
+              "params": {
+                "field": "scouter.log.object.name",
+                "missingBucket": false,
+                "missingBucketLabel": "Missing",
+                "order": "desc",
+                "orderBy": "_key",
+                "otherBucket": false,
+                "otherBucketLabel": "Other",
+                "size": 5
+              },
+              "schema": "bucket",
+              "type": "terms"
+            },
+            {
+              "enabled": true,
+              "id": "4",
+              "params": {
+                "aggregate": "max",
+                "customLabel": "최근 최대 CPU사용율(%)",
+                "field": "scouter.log.host.cpu_util",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "3",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근 메모리 사용량(mb)",
+                "field": "scouter.log.host.mem_used",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "1",
+              "params": {
+                "aggregate": "max",
+                "customLabel": "최근 메모리 총 크기 ",
+                "field": "scouter.log.host.mem_total",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "7",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근 SWAP사용량(mb)",
+                "field": "scouter.log.host.swap_used",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "8",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근 디스크 읽기(byte)",
+                "field": "scouter.log.host.disk_read_bytes",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "9",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근 디스크 쓰기(byte)",
+                "field": "scouter.log.host.disk_write_bytes",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "10",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근TCP연결수 ",
+                "field": "scouter.log.host.tcp_stat_est",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "11",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근 TCP 연결 종료수 ",
+                "field": "scouter.log.host.tcp_stat_cls",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            },
+            {
+              "enabled": true,
+              "id": "12",
+              "params": {
+                "aggregate": "concat",
+                "customLabel": "최근 TCP 타임아웃수 ",
+                "field": "scouter.log.host.tcp_stat_tim",
+                "size": 1,
+                "sortField": "@timestamp",
+                "sortOrder": "desc"
+              },
+              "schema": "metric",
+              "type": "top_hits"
+            }
+          ],
+          "params": {
+            "dimensions": {
+              "buckets": [
+                {
+                  "accessor": 0,
+                  "aggType": "terms",
+                  "format": {
+                    "id": "terms",
+                    "params": {
+                      "id": "string",
+                      "missingBucketLabel": "Missing",
+                      "otherBucketLabel": "Other"
+                    }
+                  },
+                  "params": {}
+                }
+              ],
+              "metrics": [
+                {
+                  "accessor": 1,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 2,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 3,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 4,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 5,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 6,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 7,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                },
+                {
+                  "accessor": 8,
+                  "aggType": "top_hits",
+                  "format": {
+                    "id": "number"
+                  },
+                  "params": {}
+                }
+              ]
+            },
+            "perPage": 10,
+            "showMetricsAtAllLevels": false,
+            "showPartialRows": false,
+            "showTotal": false,
+            "sort": {
+              "columnIndex": null,
+              "direction": null
+            },
+            "totalFunc": "sum"
+          },
+          "title": "scouter-metric: Host ",
+          "type": "table"
+        }
+      },
+      "id": "86926b00-e032-11e9-b41a-bd190673ea83",
+
+      "type": "visualization",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzksMV0="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": {
+            "filter": [],
+            "query": {
+              "language": "kuery",
+              "query": ""
+            }
+          }
+        },
+        "title": "scouter-metric : 스카우터 컨트롤",
+        "uiStateJSON": {},
+        "version": 1,
+        "visState": {
+          "aggs": [],
+          "params": {
+            "controls": [
+              {
+                "fieldName": "scouter.log.server.id",
+                "id": "1569488428083",
+                "indexPatternRefName": "control_0_index_pattern",
+                "label": "서버ID",
+                "options": {
+                  "dynamicOptions": true,
+                  "multiselect": true,
+                  "order": "desc",
+                  "size": 5,
+                  "type": "terms"
+                },
+                "parent": "",
+                "type": "list"
+              },
+              {
+                "fieldName": "scouter.log.object.host",
+                "id": "1569488463280",
+                "indexPatternRefName": "control_1_index_pattern",
+                "label": "호스트",
+                "options": {
+                  "dynamicOptions": true,
+                  "multiselect": true,
+                  "order": "desc",
+                  "size": 5,
+                  "type": "terms"
+                },
+                "parent": "",
+                "type": "list"
+              },
+              {
+                "fieldName": "scouter.log.object.family",
+                "id": "1569488492982",
+                "indexPatternRefName": "control_2_index_pattern",
+                "label": "오브젝트패밀리",
+                "options": {
+                  "dynamicOptions": true,
+                  "multiselect": true,
+                  "order": "desc",
+                  "size": 5,
+                  "type": "terms"
+                },
+                "parent": "",
+                "type": "list"
+              },
+              {
+                "fieldName": "scouter.log.object.type",
+                "id": "1569488521516",
+                "indexPatternRefName": "control_3_index_pattern",
+                "label": "오브젝트타입",
+                "options": {
+                  "dynamicOptions": true,
+                  "multiselect": true,
+                  "order": "desc",
+                  "size": 5,
+                  "type": "terms"
+                },
+                "parent": "",
+                "type": "list"
+              },
+              {
+                "fieldName": "scouter.log.object.name",
+                "id": "1569488548040",
+                "indexPatternRefName": "control_4_index_pattern",
+                "label": "오브젝트명",
+                "options": {
+                  "dynamicOptions": true,
+                  "multiselect": true,
+                  "order": "desc",
+                  "size": 5,
+                  "type": "terms"
+                },
+                "parent": "",
+                "type": "list"
+              }
+            ],
+            "pinFilters": true,
+            "updateFiltersOnChange": true,
+            "useTimeFilter": false
+          },
+          "title": "scouter-metric : 스카우터 컨트롤",
+          "type": "input_control_vis"
+        }
+      },
+      "id": "7403daa0-e03c-11e9-b41a-bd190673ea83",
+      "type": "visualization",
+      "updated_at": "2019-09-26T17:08:32.325Z",
+      "version": "WzEwLDFd"
+    }
+  ],
+  "version": "7.3.0"
+}

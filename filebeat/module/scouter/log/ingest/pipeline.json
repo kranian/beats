@@ -447,9 +447,8 @@
           }
       },
       {
-          "rename": {
+          "remove": {
               "field": "scouter.log.tracing.error",
-              "target_field": "scouter.log.tracing.error_cause",
               "ignore_missing": true
           }
       },

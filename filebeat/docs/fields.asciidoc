@@ -13324,10 +13324,10 @@ type: long
 
 --
 
-*`scouter.log.tracing.error_count`*::
+*`scouter.log.tracing.error_cause`*::
 +
 --
-type: integer
+type: keyword
 
 --
 
