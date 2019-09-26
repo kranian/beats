@@ -1,0 +1,288 @@
+{
+  "objects": [
+    {
+      "attributes": {
+        "description": "",
+        "hits": 0,
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"language\":\"kuery\",\"query\":\"\"},\"filter\":[]}"
+        },
+        "optionsJSON": "{\"hidePanelTitles\":false,\"useMargins\":true}",
+        "panelsJSON": "[{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":0,\"w\":13,\"h\":5,\"i\":\"1\"},\"panelIndex\":\"1\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_0\"},{\"embeddableConfig\":{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":2,\"direction\":\"desc\"}}}},\"gridData\":{\"x\":0,\"y\":5,\"w\":48,\"h\":13,\"i\":\"9\"},\"panelIndex\":\"9\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_1\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":13,\"y\":0,\"w\":35,\"h\":5,\"i\":\"10\"},\"panelIndex\":\"10\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_2\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":18,\"w\":10,\"h\":12,\"i\":\"11\"},\"panelIndex\":\"11\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_3\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":10,\"y\":18,\"w\":11,\"h\":12,\"i\":\"12\"},\"panelIndex\":\"12\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_4\"},{\"embeddableConfig\":{},\"gridData\":{\"x\":0,\"y\":30,\"w\":21,\"h\":12,\"i\":\"13\"},\"panelIndex\":\"13\",\"version\":\"7.3.0\",\"panelRefName\":\"panel_5\"},{\"gridData\":{\"x\":21,\"y\":18,\"w\":27,\"h\":12,\"i\":\"14\"},\"version\":\"7.3.0\",\"panelIndex\":\"14\",\"embeddableConfig\":{},\"panelRefName\":\"panel_6\"},{\"gridData\":{\"x\":21,\"y\":30,\"w\":27,\"h\":12,\"i\":\"15\"},\"version\":\"7.3.0\",\"panelIndex\":\"15\",\"embeddableConfig\":{},\"panelRefName\":\"panel_7\"}]",
+        "timeRestore": false,
+        "title": "scouter-metric: XLOG-분석",
+        "version": 1
+      },
+      "id": "f521e660-e017-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "dashboard": "7.3.0"
+      },
+      "references": [
+        {
+          "id": "31b9c520-e004-11e9-b41a-bd190673ea83",
+          "name": "panel_0",
+          "type": "visualization"
+        },
+        {
+          "id": "a1ab4710-e021-11e9-b41a-bd190673ea83",
+          "name": "panel_1",
+          "type": "visualization"
+        },
+        {
+          "id": "7403daa0-e03c-11e9-b41a-bd190673ea83",
+          "name": "panel_2",
+          "type": "visualization"
+        },
+        {
+          "id": "d2f02090-e03d-11e9-b41a-bd190673ea83",
+          "name": "panel_3",
+          "type": "visualization"
+        },
+        {
+          "id": "2ded2060-e03e-11e9-b41a-bd190673ea83",
+          "name": "panel_4",
+          "type": "visualization"
+        },
+        {
+          "id": "b33d6450-e03e-11e9-b41a-bd190673ea83",
+          "name": "panel_5",
+          "type": "visualization"
+        },
+        {
+          "id": "c89acb20-e03f-11e9-b41a-bd190673ea83",
+          "name": "panel_6",
+          "type": "visualization"
+        },
+        {
+          "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
+          "name": "panel_7",
+          "type": "visualization"
+        }
+      ],
+      "type": "dashboard",
+      "updated_at": "2019-09-26T09:28:11.775Z",
+      "version": "WzEzNywxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        },
+        "title": "scouter-metric: dashboard-navi",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric: dashboard-navi\",\"type\":\"markdown\",\"params\":{\"markdown\":\"**SC-Dashboard**  [Xlog-Overview](#/dashboard/bdb3c200-e00a-11e9-b41a-bd190673ea83) | [Xlog-Analysis](#/dashboard/f521e660-e017-11e9-b41a-bd190673ea83) | [JavaEE-Metric](#/dashboard/d4430860-e027-11e9-b41a-bd190673ea83) | [Host-Metric](#/dashboard/23d0ec10-e02f-11e9-b41a-bd190673ea83)\",\"openLinksInNewTab\":false,\"fontSize\":12},\"aggs\":[]}"
+      },
+      "id": "31b9c520-e004-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:33:30.145Z",
+      "version": "WzE0MiwxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"scouter.log.object.family : \\\"tracing\\\" \",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":true,\"type\":\"phrase\",\"key\":\"scouter.log.object.host\",\"value\":\"ZIPKIN\",\"params\":{\"query\":\"ZIPKIN\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"scouter.log.object.host\":{\"query\":\"ZIPKIN\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+        },
+        "title": "scouter-metric: Top 평균응답시간 엔드포인드 ",
+        "uiStateJSON": "{\"vis\":{\"params\":{\"sort\":{\"columnIndex\":6,\"direction\":\"desc\"}}}}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric: Top 평균응답시간 엔드포인드 \",\"type\":\"table\",\"params\":{\"perPage\":10,\"showPartialRows\":false,\"showMetricsAtAllLevels\":false,\"sort\":{\"columnIndex\":6,\"direction\":\"desc\"},\"showTotal\":false,\"totalFunc\":\"sum\",\"dimensions\":{\"metrics\":[{\"accessor\":1,\"format\":{\"id\":\"string\"},\"params\":{},\"aggType\":\"top_hits\"},{\"accessor\":2,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"},{\"accessor\":3,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"avg\"},{\"accessor\":4,\"format\":{\"id\":\"date\"},\"params\":{},\"aggType\":\"top_hits\"},{\"accessor\":5,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"std_dev\"},{\"accessor\":6,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"std_dev\"}],\"buckets\":[{\"accessor\":0,\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"otherBucketLabel\":\"Other\",\"missingBucketLabel\":\"Missing\"}},\"params\":{},\"aggType\":\"terms\"}]}},\"aggs\":[{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"bucket\",\"params\":{\"field\":\"scouter.log.tracing.service_name\",\"orderBy\":\"5\",\"order\":\"desc\",\"size\":100,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"customLabel\":\"url\"}},{\"id\":\"3\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"scouter.log.object.name\",\"aggregate\":\"average\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\",\"customLabel\":\"오브젝트명\"}},{\"id\":\"4\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"5\",\"enabled\":true,\"type\":\"avg\",\"schema\":\"metric\",\"params\":{\"field\":\"scouter.log.tracing.elapsed\",\"customLabel\":\"평균응답시간(ms)\"}},{\"id\":\"6\",\"enabled\":true,\"type\":\"top_hits\",\"schema\":\"metric\",\"params\":{\"field\":\"@timestamp\",\"aggregate\":\"concat\",\"size\":1,\"sortField\":\"@timestamp\",\"sortOrder\":\"desc\",\"customLabel\":\"시간\"}},{\"id\":\"7\",\"enabled\":true,\"type\":\"std_dev\",\"schema\":\"metric\",\"params\":{\"field\":\"scouter.log.tracing.elapsed\",\"customLabel\":\"표준편차\"}}]}"
+      },
+      "id": "a1ab4710-e021-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern"
+        },
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+          "type": "index-pattern"
+        }
+      ],
+      "type": "visualization",
+      "updated_at": "2019-09-26T06:30:54.134Z",
+      "version": "Wzc0LDFd"
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        },
+        "title": "scouter-metric : 스카우터 컨트롤",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric : 스카우터 컨트롤\",\"type\":\"input_control_vis\",\"params\":{\"controls\":[{\"id\":\"1569488428083\",\"fieldName\":\"scouter.log.server.id\",\"parent\":\"\",\"label\":\"서버ID\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"dynamicOptions\":true,\"size\":5,\"order\":\"desc\"},\"indexPatternRefName\":\"control_0_index_pattern\"},{\"id\":\"1569488463280\",\"fieldName\":\"scouter.log.object.host\",\"parent\":\"\",\"label\":\"호스트\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"dynamicOptions\":true,\"size\":5,\"order\":\"desc\"},\"indexPatternRefName\":\"control_1_index_pattern\"},{\"id\":\"1569488492982\",\"fieldName\":\"scouter.log.object.family\",\"parent\":\"\",\"label\":\"오브젝트패밀리\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"dynamicOptions\":true,\"size\":5,\"order\":\"desc\"},\"indexPatternRefName\":\"control_2_index_pattern\"},{\"id\":\"1569488521516\",\"fieldName\":\"scouter.log.object.type\",\"parent\":\"\",\"label\":\"오브젝트타입\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"dynamicOptions\":true,\"size\":5,\"order\":\"desc\"},\"indexPatternRefName\":\"control_3_index_pattern\"},{\"id\":\"1569488548040\",\"fieldName\":\"scouter.log.object.name\",\"parent\":\"\",\"label\":\"오브젝트명\",\"type\":\"list\",\"options\":{\"type\":\"terms\",\"multiselect\":true,\"dynamicOptions\":true,\"size\":5,\"order\":\"desc\"},\"indexPatternRefName\":\"control_4_index_pattern\"}],\"updateFiltersOnChange\":true,\"useTimeFilter\":false,\"pinFilters\":true},\"aggs\":[]}"
+      },
+      "id": "7403daa0-e03c-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "control_0_index_pattern",
+          "type": "index-pattern"
+        },
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "control_1_index_pattern",
+          "type": "index-pattern"
+        },
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "control_2_index_pattern",
+          "type": "index-pattern"
+        },
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "control_3_index_pattern",
+          "type": "index-pattern"
+        },
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "control_4_index_pattern",
+          "type": "index-pattern"
+        }
+      ],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:03:22.773Z",
+      "version": "WzEyMSwxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[{\"meta\":{\"alias\":null,\"negate\":true,\"type\":\"phrase\",\"key\":\"scouter.log.tracing.user_agent\",\"value\":\"\",\"params\":{\"query\":\"\"},\"disabled\":false,\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index\"},\"query\":{\"match\":{\"scouter.log.tracing.user_agent\":{\"query\":\"\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+        },
+        "title": "soucer-metric : Browser",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"soucer-metric : Browser\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100},\"dimensions\":{\"metric\":{\"accessor\":1,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"},\"buckets\":[{\"accessor\":0,\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"otherBucketLabel\":\"Other\",\"missingBucketLabel\":\"Missing\"}},\"params\":{},\"aggType\":\"terms\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"scouter.log.tracing.user_agent\",\"orderBy\":\"1\",\"order\":\"desc\",\"size\":5,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}"
+      },
+      "id": "d2f02090-e03d-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern"
+        },
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+          "type": "index-pattern"
+        }
+      ],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:12:54.809Z",
+      "version": "WzEzMSwxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"scouter.log.object.family : \\\"tracing\\\" \",\"language\":\"kuery\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+        },
+        "title": "scouter-metric: 오브젝트 별 Xlog 총수",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric: 오브젝트 별 Xlog 총수\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"bottom\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100},\"dimensions\":{\"metric\":{\"accessor\":1,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"count\"},\"buckets\":[{\"accessor\":0,\"format\":{\"id\":\"terms\",\"params\":{\"id\":\"string\",\"otherBucketLabel\":\"Other\",\"missingBucketLabel\":\"Missing\"}},\"params\":{},\"aggType\":\"terms\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"scouter.log.object.id\",\"orderBy\":\"1\",\"order\":\"desc\",\"size\":5,\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\"}}]}"
+      },
+      "id": "2ded2060-e03e-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern"
+        }
+      ],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:15:27.462Z",
+      "version": "WzEzMiwxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        },
+        "title": "scouter-metric: Xlog 발생 대기 추이",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric: Xlog 발생 대기 추이\",\"type\":\"metrics\",\"params\":{\"id\":\"61ca57f0-469d-11e7-af02-69e470af7417\",\"type\":\"timeseries\",\"series\":[{\"id\":\"61ca57f1-469d-11e7-af02-69e470af7417\",\"color\":\"#68BC00\",\"split_mode\":\"everything\",\"metrics\":[{\"id\":\"61ca57f2-469d-11e7-af02-69e470af7417\",\"type\":\"min\",\"field\":\"scouter.log.tracing.start_time_epoch\"},{\"lag\":\"\",\"sigma\":\"\",\"id\":\"820439e0-e03e-11e9-aab3-ef8374bfeb08\",\"type\":\"serial_diff\",\"field\":\"61ca57f2-469d-11e7-af02-69e470af7417\"},{\"script\":\"params.a/1000\",\"id\":\"89d08890-e03e-11e9-aab3-ef8374bfeb08\",\"type\":\"math\",\"variables\":[{\"id\":\"8cc1dc20-e03e-11e9-aab3-ef8374bfeb08\",\"name\":\"a\",\"field\":\"820439e0-e03e-11e9-aab3-ef8374bfeb08\"}]}],\"separate_axis\":0,\"axis_position\":\"right\",\"formatter\":\"number\",\"chart_type\":\"line\",\"line_width\":1,\"point_size\":1,\"fill\":0.5,\"stacked\":\"none\",\"label\":\"think time\",\"value_template\":\"{{value}}/s\"}],\"time_field\":\"@timestamp\",\"index_pattern\":\"filebeat-*\",\"interval\":\"\",\"axis_position\":\"left\",\"axis_formatter\":\"number\",\"axis_scale\":\"normal\",\"show_legend\":1,\"show_grid\":1,\"default_index_pattern\":\"filebeat-*\",\"default_timefield\":\"@timestamp\",\"filter\":{\"query\":\"scouter.log.object.family : \\\"tracing\\\" \",\"language\":\"kuery\"}},\"aggs\":[]}"
+      },
+      "id": "b33d6450-e03e-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:21:59.545Z",
+      "version": "WzEzNSwxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[],\"indexRefName\":\"kibanaSavedObjectMeta.searchSourceJSON.index\"}"
+        },
+        "title": "scouter-metric: 서비스 구간 별 응답 시간 ",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric: 서비스 구간 별 응답 시간 \",\"type\":\"line\",\"params\":{\"type\":\"line\",\"grid\":{\"categoryLines\":false},\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"type\":\"category\",\"position\":\"bottom\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\"},\"labels\":{\"show\":true,\"filter\":true,\"truncate\":100},\"title\":{}}],\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"name\":\"LeftAxis-1\",\"type\":\"value\",\"position\":\"left\",\"show\":true,\"style\":{},\"scale\":{\"type\":\"linear\",\"mode\":\"normal\"},\"labels\":{\"show\":true,\"rotate\":0,\"filter\":false,\"truncate\":100},\"title\":{\"text\":\"Max scouter.log.tracing.api_call_time\"}}],\"seriesParams\":[{\"show\":\"true\",\"type\":\"line\",\"mode\":\"normal\",\"data\":{\"label\":\"최근 최대 API 호출 수행시간(ms)\",\"id\":\"1\"},\"valueAxis\":\"ValueAxis-1\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"interpolate\":\"cardinal\"},{\"show\":true,\"mode\":\"normal\",\"type\":\"histogram\",\"drawLinesBetweenPoints\":true,\"showCircles\":true,\"data\":{\"id\":\"3\",\"label\":\"최근 최대 SQL 수행시간(ms)\"},\"valueAxis\":\"ValueAxis-1\",\"interpolate\":\"cardinal\"}],\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"times\":[],\"addTimeMarker\":false,\"dimensions\":{\"x\":{\"accessor\":0,\"format\":{\"id\":\"date\",\"params\":{\"pattern\":\"HH:mm\"}},\"params\":{\"date\":true,\"interval\":\"PT1M\",\"format\":\"HH:mm\",\"bounds\":{\"min\":\"2019-09-24T16:18:56.377Z\",\"max\":\"2019-09-24T18:30:00.000Z\"}},\"aggType\":\"date_histogram\"},\"y\":[{\"accessor\":1,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"max\"},{\"accessor\":2,\"format\":{\"id\":\"number\"},\"params\":{},\"aggType\":\"max\"}]}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"scouter.log.tracing.api_call_time\",\"customLabel\":\"최근 최대 API 호출 수행시간(ms)\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"date_histogram\",\"schema\":\"segment\",\"params\":{\"field\":\"@timestamp\",\"timeRange\":{\"from\":\"2019-09-24T16:18:56.377Z\",\"to\":\"2019-09-24T18:30:00.000Z\"},\"useNormalizedEsInterval\":true,\"interval\":\"auto\",\"drop_partials\":false,\"min_doc_count\":1,\"extended_bounds\":{}}},{\"id\":\"3\",\"enabled\":true,\"type\":\"max\",\"schema\":\"metric\",\"params\":{\"field\":\"scouter.log.tracing.sql_time\",\"customLabel\":\"최근 최대 SQL 수행시간(ms)\"}}]}"
+      },
+      "id": "c89acb20-e03f-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [
+        {
+          "id": "7ac52f80-e01c-11e9-b41a-bd190673ea83",
+          "name": "kibanaSavedObjectMeta.searchSourceJSON.index",
+          "type": "index-pattern"
+        }
+      ],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:26:56.466Z",
+      "version": "WzEzNiwxXQ=="
+    },
+    {
+      "attributes": {
+        "description": "",
+        "kibanaSavedObjectMeta": {
+          "searchSourceJSON": "{\"query\":{\"query\":\"\",\"language\":\"kuery\"},\"filter\":[]}"
+        },
+        "title": "scouter-metric: Xlog 트렌드",
+        "uiStateJSON": "{}",
+        "version": 1,
+        "visState": "{\"title\":\"scouter-metric: Xlog 트렌드\",\"type\":\"timelion\",\"params\":{\"expression\":\".es(index=filebeat-*,q=\\\"scouter.log.object.family:tracing\\\").label(금일XLOG건수),\\n.es(index=filebeat-*,q=\\\"scouter.log.object.family:tracing\\\",offset=-1d).label(어제XLOG건수)\",\"interval\":\"auto\"},\"aggs\":[]}"
+      },
+      "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
+      "migrationVersion": {
+        "visualization": "7.3.0"
+      },
+      "references": [],
+      "type": "visualization",
+      "updated_at": "2019-09-26T09:09:47.979Z",
+      "version": "WzEyOSwxXQ=="
+    }
+  ],
+  "version": "7.3.0"
+}

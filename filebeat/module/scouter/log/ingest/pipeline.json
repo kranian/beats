@@ -3,6 +3,12 @@
   "processors": [
       {
           "rename": {
+              "field": "@timestamp",
+              "target_field": "event.created"
+          }
+      },
+      {
+          "rename": {
               "field": "json",
               "target_field": "scouter.log"
           }
@@ -12,7 +18,7 @@
               "field" : "scouter.log.startTime",
               "formats": ["yyyyMMdd'T'HHmmss.SSSZ", "ISO8601"],
               "timezone": "Asia/Seoul",
-              "ignore_failure": true
+              "target_field": "@timestamp"
           }
       },
       {
@@ -44,13 +50,6 @@
               "ignore_missing": true
           }
       },
-      {
-          "set":{
-              "field" : "scouter.log.event_time",
-              "value" : "{{ @timestamp }}"
-          }
-      },
-
       {
           "rename": {
               "field": "scouter.log.objName",
@@ -450,7 +449,7 @@
       {
           "rename": {
               "field": "scouter.log.tracing.error",
-              "target_field": "scouter.log.tracing.error_count",
+              "target_field": "scouter.log.tracing.error_cause",
               "ignore_missing": true
           }
       },

@@ -138,8 +138,8 @@
         type: integer
       - name: end_time_epoch
         type: long
-      - name: error_count
-        type: integer
+      - name: error_cause
+        type: keyword
       - name: ip_addr
         type: ip
       - name: sql_count
