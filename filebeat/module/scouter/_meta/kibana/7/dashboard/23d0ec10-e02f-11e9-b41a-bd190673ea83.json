@@ -152,7 +152,7 @@
                 "meta": {
                   "alias": null,
                   "disabled": false,
-                  "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                  "index": "filebeat-*",
                   "key": "scouter.log.object.host",
                   "negate": true,
                   "params": {
@@ -161,6 +161,7 @@
                   "type": "phrase",
                   "value": "ZIPKIN"
                 },
+               "index": "filebeat-*",
                 "query": {
                   "match": {
                     "scouter.log.object.host": {
@@ -315,7 +316,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": "scouter.log.object.family : \"host\"  "
@@ -462,7 +463,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": "scouter.log.object.family : \"host\"  "
@@ -648,7 +649,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": "scouter.log.object.family : \"host\"  "
