@@ -256,7 +256,7 @@
             "index": "filebeat-*",
             "query": {
               "language": "kuery",
-              "query": ""
+               "query": "scouter.log.object.family : \"tracing\" "
             },
             "version": true
           }
