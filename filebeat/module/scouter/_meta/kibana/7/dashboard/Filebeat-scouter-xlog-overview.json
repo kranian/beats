@@ -70,7 +70,7 @@
               "y": 5
             },
             "panelIndex": "4",
-            "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
+            "id": "fb41e4d0-e03c-11e9-b41a-bd190673ea83",
             "type": "visualization",
             "version": "7.0.0"
           },
@@ -90,7 +90,7 @@
           }
         ],
         "timeRestore": false,
-        "title": "scouter-metric: XLOG-Overview",
+        "title": "scouter-metric: Xlog-Overview",
         "version": 1
       },
       "id": "bdb3c200-e00a-11e9-b41a-bd190673ea83",
@@ -420,7 +420,7 @@
               }
             ]
           },
-          "title": "scouter-metric: 오브젝트 별 XLog 수",
+          "title": "scouter-metric: 오브젝트 별 Xlog 수",
           "type": "heatmap"
         }
       },
@@ -449,7 +449,7 @@
         "visState": {
           "aggs": [],
           "params": {
-            "expression": ".es(index=filebeat-*,q=\"scouter.log.object.family:tracing\").label(금일XLOG건수),\n.es(index=filebeat-*,q=\"scouter.log.object.family:tracing\",offset=-1d).label(어제XLOG건수)",
+            "expression": ".es(index=filebeat-*,q=\"scouter.log.object.family:tracing\").label(금일Xlog건수),\n.es(index=filebeat-*,q=\"scouter.log.object.family:tracing\",offset=-1d).label(어제Xlog건수)",
             "interval": "auto"
           },
           "title": "scouter-metric: Xlog 트렌드",

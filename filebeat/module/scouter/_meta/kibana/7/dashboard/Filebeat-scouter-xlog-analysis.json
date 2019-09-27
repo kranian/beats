@@ -142,7 +142,7 @@
           }
         ],
         "timeRestore": false,
-        "title": "scouter-metric: XLOG-분석",
+        "title": "scouter-metric: Xlog-Analysis",
         "version": 1
       },
       "id": "f521e660-e017-11e9-b41a-bd190673ea83",
@@ -999,7 +999,7 @@
         "visState": {
           "aggs": [],
           "params": {
-            "expression": ".es(index=filebeat-*,q=\"scouter.log.object.family:tracing\").label(금일XLOG건수),\n.es(index=filebeat-*,q=\"scouter.log.object.family:tracing\",offset=-1d).label(어제XLOG건수)",
+            "expression": ".es(index=filebeat-*,q=\"scouter.log.object.family:tracing\").label(금일Xlog건수),\n.es(index=filebeat-*,q=\"scouter.log.object.family:tracing\",offset=-1d).label(어제Xlog건수)",
             "interval": "auto"
           },
           "title": "scouter-metric: Xlog 트렌드",
