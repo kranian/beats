@@ -1,9 +1,9 @@
 dashboards:
 - id: 23d0ec10-e02f-11e9-b41a-bd190673ea83
-  file: 23d0ec10-e02f-11e9-b41a-bd190673ea83.json
+  file: Filebeat-scouter-host.json
 - id: bdb3c200-e00a-11e9-b41a-bd190673ea83
-  file: bdb3c200-e00a-11e9-b41a-bd190673ea83.json
+  file: Filebeat-scouter-xlog-overview.json
 - id: d4430860-e027-11e9-b41a-bd190673ea83
-  file: d4430860-e027-11e9-b41a-bd190673ea83.json
+  file: Filebeat-scouter-javaee.json
 - id: f521e660-e017-11e9-b41a-bd190673ea83
-  file: f521e660-e017-11e9-b41a-bd190673ea83.json
+  file: Filebeat-scouter-xlog-analysis.json

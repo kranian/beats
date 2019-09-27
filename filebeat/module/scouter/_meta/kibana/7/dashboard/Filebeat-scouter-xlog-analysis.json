@@ -7,6 +7,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -28,8 +29,9 @@
               "y": 0
             },
             "panelIndex": "1",
-            "panelRefName": "panel_0",
-            "version": "7.3.0"
+             "id": "31b9c520-e004-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {
@@ -50,8 +52,9 @@
               "y": 5
             },
             "panelIndex": "9",
-            "panelRefName": "panel_1",
-            "version": "7.3.0"
+             "id": "a1ab4710-e021-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -63,8 +66,9 @@
               "y": 0
             },
             "panelIndex": "10",
-            "panelRefName": "panel_2",
-            "version": "7.3.0"
+            "id": "7403daa0-e03c-11e9-b41a-bd190673ea83",
+            "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -76,8 +80,9 @@
               "y": 18
             },
             "panelIndex": "11",
-            "panelRefName": "panel_3",
-            "version": "7.3.0"
+             "id": "d2f02090-e03d-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -89,8 +94,9 @@
               "y": 18
             },
             "panelIndex": "12",
-            "panelRefName": "panel_4",
-            "version": "7.3.0"
+             "id": "2ded2060-e03e-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -102,8 +108,9 @@
               "y": 30
             },
             "panelIndex": "13",
-            "panelRefName": "panel_5",
-            "version": "7.3.0"
+             "id": "b33d6450-e03e-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -115,8 +122,9 @@
               "y": 18
             },
             "panelIndex": "14",
-            "panelRefName": "panel_6",
-            "version": "7.3.0"
+             "id": "c89acb20-e03f-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -128,8 +136,9 @@
               "y": 30
             },
             "panelIndex": "15",
-            "panelRefName": "panel_7",
-            "version": "7.3.0"
+             "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
+             "type": "visualization",
+            "version": "7.0.0"
           }
         ],
         "timeRestore": false,
@@ -140,18 +149,13 @@
 
       "type": "dashboard",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzI2LDFd"
+      "version": 1
     },
     {
       "attributes": {
         "description": "",
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
-            "filter": [],
-            "query": {
-              "language": "kuery",
-              "query": ""
-            }
           }
         },
         "title": "scouter-metric: dashboard-navi",
@@ -172,7 +176,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzQsMV0="
+      "version": 1
     },
     {
       "attributes": {
@@ -187,7 +191,7 @@
                 "meta": {
                   "alias": null,
                   "disabled": false,
-                  "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                  "index": "filebeat-*",
                   "key": "scouter.log.object.host",
                   "negate": true,
                   "params": {
@@ -206,7 +210,7 @@
                 }
               }
             ],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": "scouter.log.object.family : \"tracing\" "
@@ -386,7 +390,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzIxLDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -394,13 +398,14 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
             }
           }
         },
-        "title": "scouter-metric : 스카우터 컨트롤",
+        "title": "scouter-metric: 스카우터 컨트롤",
         "uiStateJSON": {},
         "version": 1,
         "visState": {
@@ -410,7 +415,7 @@
               {
                 "fieldName": "scouter.log.server.id",
                 "id": "1569488428083",
-                "indexPatternRefName": "control_0_index_pattern",
+                  "indexPattern": "filebeat-*",
                 "label": "서버ID",
                 "options": {
                   "dynamicOptions": true,
@@ -425,7 +430,7 @@
               {
                 "fieldName": "scouter.log.object.host",
                 "id": "1569488463280",
-                "indexPatternRefName": "control_1_index_pattern",
+                  "indexPattern": "filebeat-*",
                 "label": "호스트",
                 "options": {
                   "dynamicOptions": true,
@@ -440,7 +445,7 @@
               {
                 "fieldName": "scouter.log.object.family",
                 "id": "1569488492982",
-                "indexPatternRefName": "control_2_index_pattern",
+                  "indexPattern": "filebeat-*",
                 "label": "오브젝트패밀리",
                 "options": {
                   "dynamicOptions": true,
@@ -455,7 +460,7 @@
               {
                 "fieldName": "scouter.log.object.type",
                 "id": "1569488521516",
-                "indexPatternRefName": "control_3_index_pattern",
+                  "indexPattern": "filebeat-*",
                 "label": "오브젝트타입",
                 "options": {
                   "dynamicOptions": true,
@@ -470,7 +475,7 @@
               {
                 "fieldName": "scouter.log.object.name",
                 "id": "1569488548040",
-                "indexPatternRefName": "control_4_index_pattern",
+                  "indexPattern": "filebeat-*",
                 "label": "오브젝트명",
                 "options": {
                   "dynamicOptions": true,
@@ -487,15 +492,14 @@
             "updateFiltersOnChange": true,
             "useTimeFilter": false
           },
-          "title": "scouter-metric : 스카우터 컨트롤",
+          "title": "scouter-metric: 스카우터 컨트롤",
           "type": "input_control_vis"
         }
       },
       "id": "7403daa0-e03c-11e9-b41a-bd190673ea83",
-
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzEwLDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -510,7 +514,7 @@
                 "meta": {
                   "alias": null,
                   "disabled": false,
-                  "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.filter[0].meta.index",
+                  "index": "filebeat-*",
                   "key": "scouter.log.tracing.user_agent",
                   "negate": true,
                   "params": {
@@ -529,7 +533,7 @@
                 }
               }
             ],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -611,7 +615,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzIyLDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -619,7 +623,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": "scouter.log.object.family : \"tracing\" "
@@ -698,10 +702,9 @@
         }
       },
       "id": "2ded2060-e03e-11e9-b41a-bd190673ea83",
-
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzIzLDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -789,7 +792,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzI0LDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -797,7 +800,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -975,7 +978,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzI1LDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -983,6 +986,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -1005,8 +1009,8 @@
       "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzE0LDFd"
+      "version": 1
     }
   ],
-  "version": "7.3.0"
+  "version": "7.0.0-SNAPSHOT"
 }

@@ -28,8 +28,9 @@
               "y": 0
             },
             "panelIndex": "1",
-            "panelRefName": "panel_0",
-            "version": "7.3.0"
+            "id": "31b9c520-e004-11e9-b41a-bd190673ea83",
+            "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -41,8 +42,9 @@
               "y": 0
             },
             "panelIndex": "2",
-            "panelRefName": "panel_1",
-            "version": "7.3.0"
+            "id": "7403daa0-e03c-11e9-b41a-bd190673ea83",
+            "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -54,8 +56,9 @@
               "y": 20
             },
             "panelIndex": "3",
-            "panelRefName": "panel_2",
-            "version": "7.3.0"
+            "id": "b00ef2a0-e03c-11e9-b41a-bd190673ea83",
+            "type": "search",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -67,8 +70,9 @@
               "y": 5
             },
             "panelIndex": "4",
-            "panelRefName": "panel_3",
-            "version": "7.3.0"
+            "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
+            "type": "visualization",
+            "version": "7.0.0"
           },
           {
             "embeddableConfig": {},
@@ -80,8 +84,9 @@
               "y": 5
             },
             "panelIndex": "5",
-            "panelRefName": "panel_4",
-            "version": "7.3.0"
+            "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
+            "type": "visualization",
+            "version": "7.0.0"
           }
         ],
         "timeRestore": false,
@@ -91,7 +96,7 @@
       "id": "bdb3c200-e00a-11e9-b41a-bd190673ea83",
       "type": "dashboard",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzE1LDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -99,6 +104,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
+              "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -122,7 +128,7 @@
       "id": "31b9c520-e004-11e9-b41a-bd190673ea83",
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzQsMV0="
+      "version": 1
     },
     {
       "attributes": {
@@ -136,7 +142,7 @@
             }
           }
         },
-        "title": "scouter-metric : 스카우터 컨트롤",
+        "title": "scouter-metric: 스카우터 컨트롤",
         "uiStateJSON": {},
         "version": 1,
         "visState": {
@@ -146,7 +152,7 @@
               {
                 "fieldName": "scouter.log.server.id",
                 "id": "1569488428083",
-                "indexPatternRefName": "control_0_index_pattern",
+                "indexPattern": "filebeat-*",
                 "label": "서버ID",
                 "options": {
                   "dynamicOptions": true,
@@ -161,7 +167,7 @@
               {
                 "fieldName": "scouter.log.object.host",
                 "id": "1569488463280",
-                "indexPatternRefName": "control_1_index_pattern",
+                "indexPattern": "filebeat-*",
                 "label": "호스트",
                 "options": {
                   "dynamicOptions": true,
@@ -176,7 +182,7 @@
               {
                 "fieldName": "scouter.log.object.family",
                 "id": "1569488492982",
-                "indexPatternRefName": "control_2_index_pattern",
+                "indexPattern": "filebeat-*",
                 "label": "오브젝트패밀리",
                 "options": {
                   "dynamicOptions": true,
@@ -191,7 +197,7 @@
               {
                 "fieldName": "scouter.log.object.type",
                 "id": "1569488521516",
-                "indexPatternRefName": "control_3_index_pattern",
+                "indexPattern": "filebeat-*",
                 "label": "오브젝트타입",
                 "options": {
                   "dynamicOptions": true,
@@ -206,7 +212,7 @@
               {
                 "fieldName": "scouter.log.object.name",
                 "id": "1569488548040",
-                "indexPatternRefName": "control_4_index_pattern",
+                "indexPattern": "filebeat-*",
                 "label": "오브젝트명",
                 "options": {
                   "dynamicOptions": true,
@@ -223,7 +229,7 @@
             "updateFiltersOnChange": true,
             "useTimeFilter": false
           },
-          "title": "scouter-metric : 스카우터 컨트롤",
+          "title": "scouter-metric: 스카우터 컨트롤",
           "type": "input_control_vis"
         }
       },
@@ -231,7 +237,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzEwLDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -247,7 +253,7 @@
           "searchSourceJSON": {
             "filter": [],
             "highlightAll": true,
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -266,7 +272,7 @@
 
       "type": "search",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzEyLDFd"
+      "version": 2
     },
     {
       "attributes": {
@@ -274,7 +280,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
-            "indexRefName": "kibanaSavedObjectMeta.searchSourceJSON.index",
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": "scouter.log.object.family : \"tracing\" "
@@ -422,7 +428,7 @@
 
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzEzLDFd"
+      "version": 1
     },
     {
       "attributes": {
@@ -430,6 +436,7 @@
         "kibanaSavedObjectMeta": {
           "searchSourceJSON": {
             "filter": [],
+            "index": "filebeat-*",
             "query": {
               "language": "kuery",
               "query": ""
@@ -452,8 +459,8 @@
       "id": "639421b0-e03d-11e9-b41a-bd190673ea83",
       "type": "visualization",
       "updated_at": "2019-09-26T17:08:32.325Z",
-      "version": "WzE0LDFd"
+      "version": 1
     }
   ],
-  "version": "7.3.0"
+  "version": "7.0.0-SNAPSHOT"
 }

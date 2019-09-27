@@ -12946,7 +12946,7 @@ type: keyword
 
 --
 
-*`scouter.log.object.familly`*::
+*`scouter.log.object.family`*::
 +
 --
 type: keyword
@@ -13324,6 +13324,13 @@ type: long
 
 --
 
+*`scouter.log.tracing.error`*::
++
+--
+type: integer
+
+--
+
 *`scouter.log.tracing.error_cause`*::
 +
 --
@@ -13356,6 +13363,34 @@ type: long
 +
 --
 type: long
+
+--
+
+*`scouter.log.tracing.tx_id`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.tracing.gx_id`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.tracing.service_name`*::
++
+--
+type: keyword
+
+--
+
+*`scouter.log.tracing.thread_name`*::
++
+--
+type: keyword
 
 --
 
